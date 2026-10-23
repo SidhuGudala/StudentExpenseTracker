@@ -9,17 +9,36 @@
 </head>
 <body>
 
-
 <header>
     <h1>Student Expense Tracker</h1>
     <p>Manage your money smarter!</p>
 </header>
 
 <main>
+    <div class="dashboard-cards">
+
     <section class="summary">
         <h2>Total Expenses</h2>
         <p id="total-expenses">₹0.00</p>
     </section>
+
+    <section class="budget-card">
+        <h2>Monthly Budget</h2>
+        <p id="monthly-budget">₹5,000.00</p>
+
+        <label for="budget-input">Set your budget (₹)</label>
+        <input type="number" id="budget-input"
+               min="1" placeholder="Enter monthly budget">
+
+        <button id="save-budget">Save Budget</button>
+    </section>
+
+    <section class="remaining-card">
+        <h2>Budget Remaining</h2>
+        <p id="remaining-budget">₹5,000.00</p>
+    </section>
+
+</div>
 
     <section class="add-expense">
         <h2>Add New Expense</h2>
@@ -43,6 +62,8 @@
                 <option value="Education">Education</option>
                 <option value="Other">Other</option>
             </select>
+            <label for="expense-date">Date</label>
+<input type="date" id="expense-date" required>
 
             <button type="submit">Add Expense</button>
         </form>
@@ -65,8 +86,23 @@
             </tbody>
         </table>
     </section>
+    <section class="chart-section">
+    <h2>Expense Breakdown</h2>
+    <p>See where your money goes.</p>
+
+    <div class="month-filter">
+        <label for="month-filter">Filter by month:</label>
+        <input type="month" id="month-filter">
+        <button type="button" id="clear-filter">Show All</button>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="expense-chart"></canvas>
+    </div>
+</section>
 </main>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="script.js"></script>
 
 

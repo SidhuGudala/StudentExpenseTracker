@@ -144,3 +144,94 @@ th, td {
 }
 
 }
+
+/* Dashboard layout */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.dashboard-cards section {
+    margin-bottom: 0;
+}
+
+/* Budget cards */
+.budget-card,
+.remaining-card {
+    background-color: white;
+    color: #25243a;
+}
+
+.budget-card h2,
+.remaining-card h2 {
+    font-size: 16px;
+}
+
+#monthly-budget,
+#remaining-budget {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.budget-card label {
+    display: block;
+}
+
+.budget-card button {
+    width: 100%;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 700px) {
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Expense chart */
+.chart-section p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 320px;
+    margin: 0 auto;
+}
+
+/* Month filter */
+.month-filter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.month-filter input {
+    width: auto;
+    margin: 0;
+}
+
+.month-filter button {
+    width: auto;
+    margin: 0;
+}
+
+@media (max-width: 500px) {
+    .month-filter {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .month-filter input,
+    .month-filter button {
+        width: 100%;
+    }
+}
