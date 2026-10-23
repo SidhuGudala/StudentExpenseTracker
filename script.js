@@ -5,8 +5,11 @@ const expenseCategory = document.getElementById("expense-category");
 const expenseTable = document.getElementById("expense-table");
 const totalExpenses = document.getElementById("total-expenses");
 
-let expenses = [];
-let nextId = 1;
+let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+
+let nextId = expenses.length
+    ? Math.max(...expenses.map(expense => expense.id)) + 1
+    : 1;
 
 function displayExpenses() {
 expenseTable.innerHTML = "";
@@ -52,6 +55,7 @@ expenses.forEach(function(expense) {
 
 totalExpenses.textContent = "₹" + total.toFixed(2);
 
+localStorage.setItem("expenses", JSON.stringify(expenses));
 
 }
 
@@ -101,3 +105,4 @@ expenseForm.reset();
 
 
 });
+displayExpenses();
