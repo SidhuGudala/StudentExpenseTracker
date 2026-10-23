@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f5fb;
+color: #25243a;
+padding: 30px;
+}
+
+header {
+text-align: center;
+margin-bottom: 35px;
+}
+
+header h1 {
+color: #6c4be8;
+font-size: 32px;
+margin-bottom: 10px;
+}
+
+header p {
+color: #777;
+font-size: 15px;
+}
+
+main {
+max-width: 900px;
+margin: auto;
+}
+
+section {
+background-color: white;
+padding: 25px;
+margin-bottom: 25px;
+border-radius: 14px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+font-size: 20px;
+margin-bottom: 20px;
+}
+
+.summary {
+background: linear-gradient(135deg, #6c4be8, #9278f5);
+color: white;
+text-align: center;
+}
+
+.summary h2 {
+font-size: 18px;
+font-weight: normal;
+}
+
+#total-expenses {
+font-size: 36px;
+font-weight: bold;
+}
+
+form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+label {
+font-size: 14px;
+font-weight: bold;
+margin-top: 5px;
+}
+
+input, select {
+width: 100%;
+padding: 12px;
+border: 1px solid #ddd;
+border-radius: 8px;
+font-size: 14px;
+background-color: white;
+}
+
+input:focus, select:focus {
+outline: none;
+border-color: #6c4be8;
+}
+
+button {
+padding: 13px;
+margin-top: 10px;
+background-color: #6c4be8;
+color: white;
+border: none;
+border-radius: 8px;
+font-size: 15px;
+cursor: pointer;
+transition: background-color 0.2s;
+}
+
+button:hover {
+background-color: #5435ca;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+}
+
+th, td {
+padding: 14px 10px;
+text-align: left;
+border-bottom: 1px solid #eee;
+}
+
+th {
+color: #777;
+font-size: 13px;
+background-color: #fafaff;
+}
+
+td {
+font-size: 14px;
+}
+
+@media (max-width: 600px) {
+body {
+padding: 15px;
+}
+
+header h1 {
+    font-size: 25px;
+}
+
+section {
+    padding: 18px;
+    overflow-x: auto;
+}
+
+th, td {
+    padding: 10px 6px;
+    font-size: 12px;
+}
+
+}
